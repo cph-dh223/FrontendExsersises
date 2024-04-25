@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<body>
+    <div id = "outer">
+        <div id = "1" class = mydiv>
+            1
+        </div>
+        <br>
+        <div id = "2" class = mydiv onclick="">
+            2
+        </div>
+        <br>
+        <div id = "3" class = mydiv onclick="">
+            3
+        </div>
+        <br>
+        <div id = "4" class = mydiv onclick="">
+            4
+        </div>
+        <br>
+        <div id = "5" class = mydiv onclick="">
+            5
+        </div>
+        <br>
+        <div id = "6" class = mydiv onclick="">
+            6
+        </div>
+        <br>
+        <div id = "7" class = mydiv onclick="">
+            7
+        </div>
+        <br>
+        <div id = "8" class = mydiv onclick="">
+            8
+        </div>
+        <br>
+        <div id = "9" class = mydiv onclick="">
+            9
+        </div>
+        <br>
+        <div id = "10" class = mydiv onclick="">
+            10
+        </div>
+        <br>
+    </div>
+    <p id = "p">
+
+    </p>
+</body>
+    
+<style>
+.mydiv { 
+  width: 25px; height: 25px;
+  background-color: yellow; margin: 1px; 
+}
+</style>
+
+<script>
+    outer.onclick = function(event) {
+    event.target.style.background = "#ffff00"
+    let p = document.getElementById("p")
+    p.innerText = `Hi from ${event.target.id}`
+    }   
+</script>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<body>
+    <br>
+    <ul id = list></ul>
+    <br>
+    <form id = "form">
+        <input id="text" type="text" ></input>
+        <button id="add" type="submit">Add name</button>
+        <button id="rmf" type="submit">remove first</button>
+        <button id="rml" type="submit">remove last</button>
+    </form>
+</body>
+<script>
+let names = ["Lars", "Jan", "Peter", "Bo", "Frederik"];
+document.getElementById("list").innerHTML = toHTML(names)
+
+form.onsubmit = function (event) {
+    event.preventDefault()
+    
+}
+
+form.onsubmit = function (event) {
+    event.preventDefault()
+    console.log(event.submitter.id);
+    let submitId = event.submitter.id;
+    switch (submitId) {
+        case "add":
+            addEvent(event)
+            break;
+        case "rml":
+            rmlEvent(event)
+            break;
+        case "rmf":
+            rmfEvent(event)
+            break;        
+    }
+    document.getElementById("list").innerHTML = toHTML(names)
+}
+
+function addEvent(event) {
+    let text = document.getElementById("text").value
+    if(text.length <= 0) return;
+    console.log(text);
+    names.push(text)
+    console.log(names)
+}
+
+function rmfEvent (event) {
+    names.reverse().pop()
+    names.reverse();
+}
+function rmlEvent (event) {
+    names.pop()
+}
+
+
+function toHTML(names) {
+    let html = names.map(a => "<li>" + a + "</li>").reduce((acc, a) => acc + a,"");
+    return html;
+}
+
+</script>

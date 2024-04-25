@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<body>
+    <div id = "list">
+
+    </div>
+</body>
+<script>
+var cars = [
+    { id: 1, year: 1997, make: 'Ford', model: 'E350', price: 3000 },
+    { id: 2, year: 1999, make: 'Chevy', model: 'Venture', price: 4900 },
+    { id: 3, year: 2000, make: 'Chevy', model: 'Venture', price: 5000 },
+    { id: 4, year: 1996, make: 'Jeep', model: 'Grand Cherokee', price: 4799 },
+    { id: 5, year: 2005, make: 'Volvo', model: 'V70', price: 44799 }
+];
+document.getElementById("list").innerHTML = carsToHtml(cars)
+
+function carsToHtml(arr) {
+    let html = "<table><tr><th>id</th><th>year</th><th>make</th><th>model</th><th>price</th></tr>"
+    html += arr.map(c => `<tr><th>${c.id}</th><th>${c.year}</th><th>${c.make}</th><th>${c.model}</th><th>${c.price}</th></tr>`).reduce((acc, c) => acc + c)
+    html += "</table>"
+    return html
+}
+</script>
