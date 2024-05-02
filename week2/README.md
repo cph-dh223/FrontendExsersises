@@ -9,7 +9,9 @@
     - [2](###2questions)
   - Tick Counter - all
   - CRUD-form - all but 11
-  - 
+  - CRUD React Project - done
+    - [Comment](###Comment)
+
 
   
 ### 2 questions
@@ -32,3 +34,6 @@ props are sent from one componenet to a noter
 #### 2.4 For which scenarios would you use props, and for which would you use state?
 prps if you need to sent values form a parrent to a child component
 state if all the values are only used in that component
+
+### Comment
+This is basicaly a strait coppy of the crud-form but with slight diffenreses to conform to the diffenreses in exsersise descirption
